@@ -7,6 +7,9 @@ PyQt widget consists of svg icon label and text label
 ## Setup
 ```pip3 install git+https://github.com/yjg30737/pyqt-svg-icon-text-widget.git --upgrade```
 
+## Included Package
+* <a href="https://github.com/yjg30737/pyqt-svg-label.git">pyqt-svg-label</a>
+
 ## Example
 Code Sample
 ```python
