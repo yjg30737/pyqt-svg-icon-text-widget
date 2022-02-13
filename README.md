@@ -1,5 +1,5 @@
 # pyqt-svg-icon-text-widget
-PyQt widget consists of textless label which has svg image as an icon on the left and text included label on the right
+PyQt widget consists of textless ```QLabel``` which has svg image as an icon on the left and text included ```QLabel``` on the right
 
 ## Requirements
 * PyQt5 >= 5.8
