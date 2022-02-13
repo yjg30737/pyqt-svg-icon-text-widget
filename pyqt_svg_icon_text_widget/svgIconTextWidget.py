@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QLabel
+from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout
 from pyqt_svg_label import SvgLabel
 
 
