@@ -15,7 +15,7 @@ PyQt widget consists of textless ```QLabel``` which has svg image as an icon on 
 * ```setText(text: str)``` to set text
 
 ## Note
-svg icon ```QLabel```'s maximum height is set according to text included ```QLabel```'s font height.
+Svg icon ```QLabel```'s maximum height is set according to text included ```QLabel```'s font height.
 
 ## Example
 Code Sample
