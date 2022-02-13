@@ -1,2 +1,31 @@
 # pyqt-svg-icon-text-widget
 PyQt widget consists of svg icon label and text label
+
+## Requirements
+* PyQt5 >= 5.8
+
+## Setup
+```pip3 install git+https://github.com/yjg30737/pyqt-svg-icon-text-widget.git --upgrade```
+
+## Example
+Code Sample
+```python
+from PyQt5.QtWidgets import QApplication
+from pyqt_svg_icon_text_widget import SvgIconTextWidget
+
+
+if __name__ == "__main__":
+    import sys
+
+    app = QApplication(sys.argv)
+    ex = SvgIconTextWidget()
+    ex.setSvgFile('ico/dark-notepad.svg')
+    ex.setText('Dark Notepad')
+    ex.show()
+    sys.exit(app.exec_())
+```
+
+Result
+
+![image](https://user-images.githubusercontent.com/55078043/153750415-c9f99eb7-46be-4703-9751-18578e839f4b.png)
+
