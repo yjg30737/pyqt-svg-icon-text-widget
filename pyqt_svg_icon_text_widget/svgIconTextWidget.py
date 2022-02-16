@@ -29,3 +29,10 @@ class SvgIconTextWidget(QWidget):
 
     def setText(self, text: str):
         self.__textLbl.setText(text)
+
+    def getSvgLabel(self) -> SvgLabel:
+        return self.__svgIconLbl
+
+    def getTextLabel(self) -> QLabel:
+        return self.__textLbl
+
