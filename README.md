@@ -1,21 +1,23 @@
 # pyqt-svg-icon-text-widget
-PyQt widget consists of textless ```QLabel``` which has svg image as an icon on the left and text included ```QLabel``` on the right. This module is useful to set the icon included title bar.
+PyQt widget consists of textless `QLabel` which has svg image as an icon on the left and text included `QLabel` on the right. 
+
+This module is useful to set the icon included title bar.
 
 ## Requirements
 * PyQt5 >= 5.8
 
 ## Setup
-```pip3 install git+https://github.com/yjg30737/pyqt-svg-icon-text-widget.git --upgrade```
+`python -m pip install pyqt-svg-icon-text-widget`
 
 ## Included Package
 * <a href="https://github.com/yjg30737/pyqt-svg-label.git">pyqt-svg-label</a>
 
 ## Usage
-* ```setSvgFile(filename: str)``` to set svg file
-* ```setText(text: str)``` to set text
+* `setSvgFile(filename: str)` to set svg file
+* `setText(text: str)` to set text
 
 ## Note
-Svg icon ```QLabel```'s maximum height is set according to text included ```QLabel```'s font height.
+Svg icon `QLabel`'s maximum height is set according to text included `QLabel`'s font height.
 
 ## Example
 Code Sample
