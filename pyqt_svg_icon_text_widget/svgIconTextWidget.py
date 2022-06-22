@@ -34,8 +34,7 @@ class SvgIconTextWidget(QWidget):
         return self.__textLbl
 
     def __setIconSizeForFontSize(self):
-        # make self.__svgIconLbl's size accordance with logical dots per inch
-        w = h = qApp.screens()[0].logicalDotsPerInch() // 5
+        w = h = self.__textLbl.font().pointSize() * 1.5 * qApp.screens()[0].logicalDotsPerInch()//96.0
         self.__svgIconLbl.setFixedSize(w, h)
 
     def eventFilter(self, obj, e):
