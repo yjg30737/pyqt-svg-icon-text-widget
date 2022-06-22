@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout
+from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout, qApp
 from pyqt_svg_label import SvgLabel
 
 
@@ -13,8 +13,6 @@ class SvgIconTextWidget(QWidget):
         self.__textLbl = QLabel()
         self.__textLbl.installEventFilter(self)
 
-        title_lbl_size = self.__textLbl.font().pointSize()
-
         self.__setIconSizeForFontSize()
 
         lay = QHBoxLayout()
@@ -25,7 +23,6 @@ class SvgIconTextWidget(QWidget):
 
     def setSvgFile(self, filename: str):
         self.__svgIconLbl.setSvgFile(filename)
-        title_lbl_size = self.__textLbl.font().pointSize()
 
     def setText(self, text: str):
         self.__textLbl.setText(text)
@@ -37,10 +34,9 @@ class SvgIconTextWidget(QWidget):
         return self.__textLbl
 
     def __setIconSizeForFontSize(self):
-        # get the point size of the self.__textLbl's font
-        title_lbl_size = self.__textLbl.font().pointSize()
-        # to match the self.__svgIconLbl's size with self.__textLbl's font size
-        self.__svgIconLbl.setFixedSize(title_lbl_size * 1.5, title_lbl_size * 1.5)
+        # make self.__svgIconLbl's size accordance with logical dots per inch
+        w = h = qApp.screens()[0].logicalDotsPerInch() // 5
+        self.__svgIconLbl.setFixedSize(w, h)
 
     def eventFilter(self, obj, e):
         if obj == self.__textLbl:
