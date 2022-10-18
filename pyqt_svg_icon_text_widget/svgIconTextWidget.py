@@ -34,7 +34,7 @@ class SvgIconTextWidget(QWidget):
         return self.__textLbl
 
     def __setIconSizeForFontSize(self):
-        w = h = self.__textLbl.font().pointSize() * 1.5 * qApp.screens()[0].logicalDotsPerInch()//96.0
+        w = h = int(self.__textLbl.font().pointSize() * 1.5 * qApp.screens()[0].logicalDotsPerInch()//96.0)
         self.__svgIconLbl.setFixedSize(w, h)
 
     def eventFilter(self, obj, e):
